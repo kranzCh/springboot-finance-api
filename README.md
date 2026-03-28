@@ -6,7 +6,7 @@ A RESTful API for managing personal finances — accounts, transactions, and bud
 
 | Layer | Technology |
 |---|---|
-| Language | Java 17 |
+| Language | Java 21 |
 | Framework | Spring Boot 3.2 |
 | Build | Maven 3.9 |
 | Database | PostgreSQL (prod), H2 (dev/test) |
@@ -14,7 +14,9 @@ A RESTful API for managing personal finances — accounts, transactions, and bud
 | Security | Spring Security + JWT (jjwt 0.12) |
 | API Docs | SpringDoc OpenAPI 3 (Swagger UI) |
 | Testing | JUnit 5, Mockito, Spring Boot Test |
+| Migrations | Flyway |
 | Utilities | Lombok |
+| Dev Infra | Docker + docker-compose |
 
 ## Project Structure
 
@@ -53,9 +55,9 @@ src/
 
 ### Prerequisites
 
-- Java 17+
+- Java 21+
 - Maven 3.9+
-- PostgreSQL 14+ (for production profile)
+- Docker (for PostgreSQL via docker-compose)
 
 ### Clone
 
@@ -76,18 +78,16 @@ H2 Console: [http://localhost:8080/h2-console](http://localhost:8080/h2-console)
 - JDBC URL: `jdbc:h2:mem:finance_dev`
 - Username: `sa` / Password: *(empty)*
 
-### Run with PostgreSQL
+### Run with PostgreSQL (Docker)
 
-1. Create the database:
-   ```sql
-   CREATE DATABASE finance_db;
+1. Copy the environment file and set your secrets:
+   ```bash
+   cp .env.example .env
    ```
 
-2. Set environment variables (or update `application.yml`):
+2. Start PostgreSQL:
    ```bash
-   export DB_USERNAME=postgres
-   export DB_PASSWORD=your_password
-   export JWT_SECRET=your-256-bit-secret-key-here
+   docker compose up -d
    ```
 
 3. Run:
