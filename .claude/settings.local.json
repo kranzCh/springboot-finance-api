@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(java -version)",
+      "Bash(mvn -version)",
+      "Bash(git --version)",
+      "Bash(gh --version)",
+      "Bash(echo \"java_exit:$?\")",
+      "Read(//c/Users/epmyc/scoop/apps/openjdk17/current/bin//**)",
+      "Read(//c/Users/epmyc/scoop/apps/maven/current/bin//**)",
+      "Bash(JAVA_HOME=/c/Users/epmyc/scoop/apps/openjdk17/current)",
+      "Bash(export PATH=$JAVA_HOME/bin:/c/Users/epmyc/scoop/apps/maven/current/bin:$PATH)",
+      "Bash(JAVA_HOME=/c/Users/epmyc/scoop/apps/openjdk17/current export PATH=$JAVA_HOME/bin:/c/Users/epmyc/scoop/apps/maven/current/bin:$PATH)",
+      "Bash(mvn compile:*)",
+      "Bash(export JAVA_HOME=/c/Users/epmyc/scoop/apps/openjdk17/current)",
+      "Bash(mvn test:*)"
+    ]
+  }
+}
