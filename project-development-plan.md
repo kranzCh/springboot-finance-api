@@ -118,16 +118,16 @@ Each block represents one evening session (~2–3 hours).
 ### 🔵 Phase 1: Authentication Foundation (Days 1–2)
 
 #### Day 1 — Project Bootstrap & Security Config
-- [ ] Initialize Spring Boot 3 project via Spring Initializr (Web, Security, JPA, PostgreSQL driver, Lombok)
-- [ ] Configure `application.yml`: datasource, JPA `ddl-auto=create`, server port
-- [ ] Create PostgreSQL database locally (or via Docker); verify connection
-- [ ] Add JWT library dependency (`jjwt` or `spring-security-jwt`) to `pom.xml` / `build.gradle`
-- [ ] Scaffold package structure: `controller`, `service`, `repository`, `model`, `dto`, `security`, `exception`
-- [ ] Create `User` entity with `@Entity`, `@Id`, `@GeneratedValue`, username, passwordHash, createdAt
-- [ ] Create `UserRepository` extending `JpaRepository<User, Long>`
+- [x] Initialize Spring Boot 3 project via Spring Initializr (Web, Security, JPA, PostgreSQL driver, Lombok)
+- [x] Configure `application.yml`: datasource, JPA `ddl-auto=create`, server port
+- [x] Create PostgreSQL database locally (or via Docker); verify connection
+- [x] Add JWT library dependency (`jjwt` or `spring-security-jwt`) to `pom.xml` / `build.gradle`
+- [x] Scaffold package structure: `controller`, `service`, `repository`, `model`, `dto`, `security`, `exception`
+- [x] Create `User` entity with `@Entity`, `@Id`, `@GeneratedValue`, username, passwordHash, createdAt
+- [x] Create `UserRepository` extending `JpaRepository<User, Long>`
 
 #### Day 2 — JWT Auth Endpoints
-- [ ] Implement `JwtTokenProvider`: `generateToken()`, `validateToken()`, `extractUsername()`
+- [x] Implement `JwtTokenProvider`: `generateToken()`, `validateToken()`, `extractUsername()`
 - [ ] Implement `JwtAuthenticationFilter` extends `OncePerRequestFilter`
 - [ ] Configure `SecurityFilterChain`: permit `/api/auth/**`, require auth on all others
 - [ ] Implement `AuthService`: `register()` with `BCryptPasswordEncoder`, `login()` returning JWT
