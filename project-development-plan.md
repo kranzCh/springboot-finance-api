@@ -128,12 +128,12 @@ Each block represents one evening session (~2–3 hours).
 
 #### Day 2 — JWT Auth Endpoints
 - [x] Implement `JwtTokenProvider`: `generateToken()`, `validateToken()`, `extractUsername()`
-- [ ] Implement `JwtAuthenticationFilter` extends `OncePerRequestFilter`
-- [ ] Configure `SecurityFilterChain`: permit `/api/auth/**`, require auth on all others
-- [ ] Implement `AuthService`: `register()` with `BCryptPasswordEncoder`, `login()` returning JWT
-- [ ] Create `AuthController`: `POST /api/auth/register` and `POST /api/auth/login`
-- [ ] Define `RegisterRequest` and `LoginResponse` DTOs
-- [ ] Manual test: register a user, login, inspect JWT payload at jwt.io
+- [x] Implement `JwtAuthenticationFilter` extends `OncePerRequestFilter`
+- [x] Configure `SecurityFilterChain`: permit `/api/auth/**`, require auth on all others
+- [x] Implement `AuthService`: `register()` with `BCryptPasswordEncoder`, `login()` returning JWT
+- [x] Create `AuthController`: `POST /api/auth/register` and `POST /api/auth/login`
+- [x] Define `RegisterRequest` and `LoginResponse` DTOs
+- [x] Manual test: register a user, login, inspect JWT payload at jwt.io
 
 ---
 
